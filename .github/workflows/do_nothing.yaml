@@ -1,6 +1,10 @@
 name: No-Operation Workflow
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
+      - l10n_main
 
 jobs:
   do-nothing:
