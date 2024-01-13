@@ -12,7 +12,7 @@ env:
 jobs:
   do-nothing:
     runs-on: ubuntu-latest
-    if: env.LANG_CODE == 'uk'
     steps:
       - name: No Operation
+        if: ${{ env.LANG_CODE == 'uk' }}
         run: echo "Hello World!"
