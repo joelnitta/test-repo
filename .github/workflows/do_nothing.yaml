@@ -1,0 +1,10 @@
+name: No-Operation Workflow
+
+on: [push]
+
+jobs:
+  do-nothing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: No Operation
+        run: echo "This workflow does nothing"
