@@ -9,6 +9,7 @@ on:
 jobs:
   do-nothing:
     runs-on: ubuntu-latest
+    if: github.ref != 'refs/heads/l10n_main'
     steps:
       - name: No Operation
         run: echo "Hello World!"
