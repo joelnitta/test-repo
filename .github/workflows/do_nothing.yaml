@@ -13,4 +13,4 @@ jobs:
       LANG_CODE: ${{ secrets.LANG_CODE || 'en' }}
     steps:
       - name: No Operation
-        run: echo "Hello $LANG_CODE!"
+        run: echo $LANG_CODE
