@@ -6,10 +6,13 @@ on:
       - main
       - l10n_main
 
+env:
+  LANG_CODE: "uk"
+
 jobs:
   do-nothing:
     runs-on: ubuntu-latest
-    if: github.ref != 'refs/heads/l10n_main'
+    if: env.LANG_CODE == 'uk'
     steps:
       - name: No Operation
         run: echo "Hello World!"
