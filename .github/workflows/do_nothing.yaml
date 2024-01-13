@@ -9,7 +9,8 @@ on:
 jobs:
   do-nothing:
     runs-on: ubuntu-latest
+    env:
+      LANG_CODE: ${{ secrets.LANG_CODE || 'en' }}
     steps:
       - name: No Operation
-        if: ${{ env.LANG_CODE == 'uk' }}
-        run: echo "Hello World!"
+        run: echo "Hello $LANG_CODE!"
