@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Use the Variable
-        run: echo "Variable value is ${{ env.LANG_CODE }}"
+        run: echo "Variable value is ${{ secrets.LANG_CODE }}"
