@@ -1,4 +1,4 @@
-name: No-Operation Workflow
+name: Test using variables
 
 on:
   push:
@@ -7,10 +7,10 @@ on:
       - l10n_main
 
 jobs:
-  do-nothing:
+  example_job:
     runs-on: ubuntu-latest
     env:
-      LANG_CODE: ${{ secrets.LANG_CODE || 'en' }}
+      LANG_CODE: ${{ secrets.LANG_CODE || 'default_value' }}
     steps:
-      - name: No Operation
-        run: echo $LANG_CODE
+      - name: Use the Variable
+        run: echo "Variable value is $LANG_CODE"
