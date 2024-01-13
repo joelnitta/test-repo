@@ -6,9 +6,6 @@ on:
       - main
       - l10n_main
 
-env:
-  LANG_CODE: "uk"
-
 jobs:
   do-nothing:
     runs-on: ubuntu-latest
